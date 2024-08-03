@@ -116,7 +116,7 @@ export const POST = async (req: Request) => {
 
         const toPubkey = new PublicKey(DEFAULT_SOL_ADDRESS);
         const connection = new Connection(
-            process.env.SOLANA_RPC! || clusterApiUrl("testnet")
+            process.env.SOLANA_RPC! || clusterApiUrl("devnet")
         );
 
         // ensure the receiving account will be rent exempt

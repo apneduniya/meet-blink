@@ -1,7 +1,13 @@
 
-import { URL } from "url";  
+import { URL } from "url";
 
 export default function validatedQueryParams(requestUrl: URL) {
+    /**
+     * Validate the input query parameters. If any of the required query parameters are missing, an error is thrown.
+     * @param {URL} requestUrl - The URL object
+     * @returns {Object} - The validated query parameters
+     */
+
     let name: string = "";
     let dateAndTime: string = "";
     let scheduleMeetLink: string = "";
@@ -47,6 +53,7 @@ export default function validatedQueryParams(requestUrl: URL) {
         throw "Invalid input query parameter: description";
     }
 
+    
     return {
         name,
         dateAndTime,

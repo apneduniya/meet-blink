@@ -154,8 +154,7 @@ export const POST = async (req: Request) => {
             await connection.getLatestBlockhash()
         ).blockhash;
 
-        // TODO: Web2 implementation to create user in DB
-        console.log(name);
+        // TODO: Web2 implementation to send a mail to the user
 
         const payload: ActionPostResponse = await createPostResponse({
             fields: {

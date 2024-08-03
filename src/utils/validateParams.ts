@@ -1,5 +1,5 @@
 
-
+import { URL } from "url";  
 
 export default function validatedQueryParams(requestUrl: URL) {
     let name: string = "";
@@ -12,7 +12,7 @@ export default function validatedQueryParams(requestUrl: URL) {
             name = requestUrl.searchParams.get("name")!;
         }
 
-        if (!!name) throw "name is invalid"; // name is required
+        if (!!!name) throw "name is invalid"; // name is required
     } catch (err) {
         throw "Invalid input query parameter: name";
     }
@@ -22,7 +22,7 @@ export default function validatedQueryParams(requestUrl: URL) {
             dateAndTime = requestUrl.searchParams.get("dateAndTime")!;
         }
 
-        if (!dateAndTime) throw "dateAndTime is invalid"; // dateAndTime is required
+        if (!!!dateAndTime) throw "dateAndTime is invalid"; // dateAndTime is required
     } catch (err) {
         throw "Invalid input query parameter: dateAndTime";
     }
@@ -32,7 +32,7 @@ export default function validatedQueryParams(requestUrl: URL) {
             scheduleMeetLink = requestUrl.searchParams.get("scheduleMeetLink")!;
         }
 
-        if (!scheduleMeetLink) throw "scheduleMeetLink is invalid"; // scheduleMeetLink is required
+        if (!!!scheduleMeetLink) throw "scheduleMeetLink is invalid"; // scheduleMeetLink is required
     } catch (err) {
         throw "Invalid input query parameter: scheduleMeetLink";
     }
@@ -42,7 +42,7 @@ export default function validatedQueryParams(requestUrl: URL) {
             description = requestUrl.searchParams.get("description")!;
         }
 
-        if (!description) throw "description is invalid"; // description is required
+        if (!!!description) throw "description is invalid"; // description is required
     } catch (err) {
         throw "Invalid input query parameter: description";
     }

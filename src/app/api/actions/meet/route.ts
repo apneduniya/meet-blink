@@ -135,7 +135,7 @@ export const POST = async (req: Request) => {
             new TransactionInstruction({
                 keys: [{ pubkey: fromPubkey, isSigner: true, isWritable: true }],
                 data: Buffer.from(
-                    `schedule meet with ${name} on ${dateAndTime} at ${scheduleMeetLink} with description: ${description}`,
+                    `Schedule meet with ${name} on ${dateAndTime} at ${scheduleMeetLink} with description: ${description}`,
                     "utf8"
                   ),
                 programId: new PublicKey(MEMO_PROGRAM_ID),

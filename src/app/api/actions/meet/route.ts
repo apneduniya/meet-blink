@@ -10,7 +10,6 @@ import {
 } from "@solana/actions";
 import {
     clusterApiUrl,
-    ComputeBudgetProgram,
     Connection,
     LAMPORTS_PER_SOL,
     PublicKey,
@@ -36,7 +35,7 @@ export const GET = async (req: Request) => {
             title: "Schedule a meet on-chain",
             icon: "https://avatars.githubusercontent.com/u/113763427?v=4",
             description:
-                "Schedule a request for meet using Solana via Blinks.",
+                "Schedule a request for meet with Adarsh using Solana via Blinks.",
             label: "Book",
             links:
             {
